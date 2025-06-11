@@ -57,14 +57,14 @@ class MyLinkedHashMapTest {
         assertEquals(3, linkedMap.get("third"));
 
         StringBuilder order = new StringBuilder();
-        linkedMap.printOrder(); // Вывод: first, second, third
+        linkedMap.printOrder();
     }
 
     @Test
     void testUpdateValuePreservesOrder() {
         linkedMap.put("one", 1);
         linkedMap.put("two", 2);
-        linkedMap.put("one", 11); // обновление
+        linkedMap.put("one", 11);
 
         assertEquals(2, linkedMap.size());
         assertEquals(11, linkedMap.get("one"));
